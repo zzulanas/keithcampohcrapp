@@ -47,6 +47,7 @@
         <a class="waves-effect waves-light btn" onclick="pressing()">NUT</a>
     </div>
     <p id="test"></p>
+
     <script src="js/ohjava.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
@@ -60,7 +61,17 @@
       s.Close();
     }
   </script>
-  <script type="text/javascript" src=""
+  <script type="text/javascript">
+  var pressed = false;
+  var test = "hey"
+  var masternum = 0;
+  function pressing(){
+    pressed = true;
+    document.getElementById("test").innerHTML = test;
+    WriteToFile();
+
+  }
+  </script>
     <script>
         // Initialize Firebase
         var config = {
