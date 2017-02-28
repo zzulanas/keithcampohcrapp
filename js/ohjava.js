@@ -12,6 +12,6 @@ function press2(){
 
 }
 
-function reset();{
+function reset(){
 
 }
