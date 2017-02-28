@@ -1,3 +1,8 @@
+<?php
+	$fp = fopen('heyoo.txt', 'a');
+	fwrite($fp, '1');
+	fclose($fp);
+?>
 <!DOCTYPE html>
 <html>
 
@@ -36,6 +41,7 @@
         div  {
             text-align: center;
         }
+
     </style>
 </head>
 
@@ -43,9 +49,11 @@
     <title>Keith Campbell's Oh Crap App</title>
     <h1>Having Trouble?</h1>
     <h2>Press here!</h2>
-    <div id="a">
-        <a class="waves-effect waves-light btn" onclick="pressing()">NUT</a>
-    </div>
+	<div>
+	<form class="mui-form" method="post" action="index.php" target="votar"  class="waves-effect waves-light btn-large">
+    <button id="mybtn" class="waves-effect waves-light btn" type="submit">NUT</button>
+	</form>
+	</div>
     <p id="test"></p>
     <script src="js/ohjava.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -63,6 +71,8 @@
         };
         firebase.initializeApp(config);
     </script>
+
+
 
 </body>
 
