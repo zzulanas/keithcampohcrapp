@@ -46,7 +46,7 @@
 </head>
 
 <body>
-    <title>Keith Campbell's Oh Crap App</title>
+    <title>Keith Campbell's Oh Crap! App</title>
     <h1>Having Trouble?</h1>
     <h2>Press here!</h2>
 	<div>
@@ -60,7 +60,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
-    
+
     <script>
         // Initialize Firebase
         var config = {
