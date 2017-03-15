@@ -1,5 +1,5 @@
 <?php
-	$fp = fopen('heyoo.txt', 'a');
+	$fp = fopen('heyoo.txt', 'w');
 	fwrite($fp, '1');
 	fclose($fp);
 ?>
@@ -50,9 +50,7 @@
     <h1>Having Trouble?</h1>
     <h2>Press here!</h2>
 	<div>
-	<form class="mui-form" method="post" action="index.php" target="votar"  class="waves-effect waves-light btn-large">
-    <button id="mybtn" class="waves-effect waves-light btn" type="submit">NUT</button>
-	</form>
+	<a class="waves-effect waves-light btn">HELP</a>
 	</div>
     <p id="test"></p>
 
