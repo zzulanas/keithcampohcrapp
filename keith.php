@@ -1,7 +1,11 @@
 <?php
-	$fp = fopen('heyoo.txt', 'w');
-	fwrite($fp, '');
-	fclose($fp);
+	if (isset($_POST['btn'])){
+		$fh = fopen( 'heyoo.txt', 'w' ); 
+		$fp = fopen('reset.txt', 'a');
+		fwrite($fp, '1');
+		fclose($fp);
+		fclose($fh);
+	}
 ?>
 <!DOCTYPE hmtl>
 <html>
@@ -55,7 +59,10 @@
         <!--VASANTH PUT THE PYTHON SCRIPT HERE-->
     </p>
     <div>
-<a class="waves-effect waves-light btn">RESET</a>
+		<form class="mui-form" method="post" action="keith.php" target="votar">
+			<!--<input type="email" name="email" id="email" class="waves-effect waves-light btn">RESET</a>-->
+			<button id="myBtn" class="waves-effect waves-light btn" style="align: center;" type="submit" name = "btn">RESET</button>
+		</form>
     </div>
 
 

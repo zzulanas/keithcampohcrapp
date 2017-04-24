@@ -1,7 +1,16 @@
 <?php
-	$fp = fopen('heyoo.txt', 'w');
-	fwrite($fp, '1');
-	fclose($fp);
+	if (isset($_POST['btn'])){
+		if(strlen(file_get_contents('./reset.txt', true))>$_COOKIE["kevinsidea"]){
+			if(strlen(file_get_contents('./heyoo.txt', true))>35){
+				$fh = fopen( 'heyoo.txt', 'w' ); 
+				fclose($fh);
+			}
+			$fp = fopen('heyoo.txt', 'a');
+			fwrite($fp, '1');
+			fclose($fp);
+			setcookie('kevinsidea', strlen(file_get_contents('./reset.txt', true)));
+		}
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -50,7 +59,10 @@
     <h1>Having Trouble?</h1>
     <h2>Press here!</h2>
 	<div>
-	<a class="waves-effect waves-light btn">HELP</a>
+	<form class="mui-form" method="post" action="index.php" target="votar">
+		<!--<input type="email" name="email" id="email" class="waves-effect waves-light btn">RESET</a>-->
+		<button id="myBtn" class="waves-effect waves-light btn" style="align: center;" type="submit" name = "btn">HELO</button>
+	</form>
 	</div>
     <p id="test"></p>
 
